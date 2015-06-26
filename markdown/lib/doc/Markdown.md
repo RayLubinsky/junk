@@ -82,21 +82,26 @@
   + Item 4
   + Item 5
 
+
   * Item 1
   * Item 2
   * Item 3
+
 
   - Item 1
   - Item 2
   - Item 3
 
+
   + Item 1
   + Item 2
   + Item 3
 
+
   * Item 1
   - Item 2
   + Item 3
+
 
   Precede lines with numbers for a numbered list:
 
