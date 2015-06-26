@@ -38,7 +38,6 @@
 | Bold-Italic | \*\*\*sample\*\*\*  | **N**     | Y       | Y       | **_sample_**  |
 | Bold-Italic | \*\*\_sample\_\*\*  | **N**     | Y       | Y       | **_sample_**  |
 | Bold-Italic | \_\*\*sample\*\*\_  | **N**     | Y       | Y       | _**sample**_  |
-[*Styling words*]
 
 | Effect      | Combination                   | Text Tab  | Preview | GitHub  | Example                 |
 | ----------- | ----------------------------- |:---------:|:-------:|:-------:| ----------------------- |
@@ -46,7 +45,6 @@
 | Bold-Italic | \_first \*\*sample\*\* last\_ | **N**     | Y       | Y       | _first **sample** last_ |
 | Bold-Italic | \*\*first \*sample\* last\*\* | **N**     | Y       | Y       | **first *sample* last** |
 | Bold-Italic | \*first \*\*sample\*\* last\* | **N**     | Y       | **N**   | *first **sample** last* |
-[*Styling sentences*]
 
   *If a space precedes the final star... *
   the star is displayed and text is still italic.*            <br/>
@@ -76,7 +74,6 @@
 
   Precede lines with "\*", "\-" and/or "\+" to show them in a list:
   
-  
   + Item 1
   
   - Item 2
@@ -87,10 +84,8 @@
   
   * Item 5
 
-
   Precede lines with numbers for a numbered list:
   
-
   1. Item 1
   
   2. Item 2
@@ -106,10 +101,12 @@
 1. Item 1
   * Subitem 1-1 (indented two spaces)
   * Subitem 1-2 (indented two spaces)
+
 2. Item 2
     * Subitem 2-1 (indented four spaces)
       - Subitem 2-2 (indented six spaces)
         * Subitem 2-2-2 (indented eight spaces)
+
 3. Item 3
   - Subitem 3-1 (indented two spaces)
     * Subitem 3-1-1 (indented four spaces)
@@ -120,14 +117,17 @@
 * Item 1
   1. Subitem 1-1 (indented two spaces)
   2. Subitem 1-2 (indented two spaces)
+
 * Item 2
     1. Subitem 2-1 (indented four spaces)
       2. Subitem 2-2 (indented six spaces)
         3. Subitem 2-2-2 (indented eight spaces)
+
 * Item 3
   1. Subitem 3-1 (indented two spaces)
     2. Subitem 3-1-1 (indented four spaces)
       3. Subitem 3-1-2 (indented six spaces)
+
 <br/>
 
 ---
