@@ -30,22 +30,22 @@
   Surround text with two stars for **bold** text.
   <br/><br/>
 
-| Effect      | Combination         | Text Tab  | Preview | Example       |
-| ----------- | ------------------- |:---------:|:-------:| ------------- |
-| Italic      | \_sample\_          | Y         | Y       | _sample_      |
-| Italic      | \*sample\*          | Y         | Y       | *sample*      |
-| Bold        | \*\*sample\*\*      | Y         | Y       | **sample**    |
-| Bold-Italic | \*\*\*sample\*\*\*  | N         | Y       | **_sample_**  |
-| Bold-Italic | \*\*\_sample\_\*\*  | N         | Y       | **_sample_**  |
-| Bold-Italic | \_\*\*sample\*\*\_  | N         | Y       | _**sample**_  |
+| Effect      | Combination         | Text Tab  | Preview | GitHub  | Example       |
+| ----------- | ------------------- |:---------:|:-------:|:-------:| ------------- |
+| Italic      | \_sample\_          | Y         | Y       | Y       | _sample_      |
+| Italic      | \*sample\*          | Y         | Y       | Y       | *sample*      |
+| Bold        | \*\*sample\*\*      | Y         | Y       | Y       | **sample**    |
+| Bold-Italic | \*\*\*sample\*\*\*  | **N**     | Y       | Y       | **_sample_**  |
+| Bold-Italic | \*\*\_sample\_\*\*  | **N**     | Y       | Y       | **_sample_**  |
+| Bold-Italic | \_\*\*sample\*\*\_  | **N**     | Y       | Y       | _**sample**_  |
 [*Styling words*]
 
-| Effect      | Combination                   | Text Tab  | Preview | Example                 |
-| ----------- | ----------------------------- |:---------:|:-------:| ----------------------- |
-| Bold-Italic | \*\*first \_sample\_ last\*\* | N         | Y       | **first _sample_ last** |
-| Bold-Italic | \_first \*\*sample\*\* last\_ | N         | Y       | _first **sample** last_ |
-| Bold-Italic | \*\*first \*sample\* last\*\* | N         | Y       | **first *sample* last** |
-| Bold-Italic | \*first \*\*sample\*\* last\* | N         | Y       | *first **sample** last* |
+| Effect      | Combination                   | Text Tab  | Preview | GitHub  | Example                 |
+| ----------- | ----------------------------- |:---------:|:-------:|:-------:| ----------------------- |
+| Bold-Italic | \*\*first \_sample\_ last\*\* | **N**     | Y       | Y       | **first _sample_ last** |
+| Bold-Italic | \_first \*\*sample\*\* last\_ | **N**     | Y       | Y       | _first **sample** last_ |
+| Bold-Italic | \*\*first \*sample\* last\*\* | **N**     | Y       | Y       | **first *sample* last** |
+| Bold-Italic | \*first \*\*sample\*\* last\* | **N**     | Y       | **N**   | *first **sample** last* |
 [*Styling sentences*]
 
   *If a space precedes the final star... *
@@ -260,6 +260,8 @@
   
   ***Tip***: begin the table title with a break (\<br/\>) to create a gap
   between the table and the preceding text.
+  
+  ***Tip***: table titles don't work when displaying through GitHub.
 
   *Reference*: http://fletcher.github.io/MultiMarkdown-4/tables.html <br/>
 
@@ -275,9 +277,8 @@
 | New section     | More           | Data            |
 | And more        | With an escaped '\|'            ||
 | And more        | xxx            | yyy             |
-[<br/> *Figure 1*]
 
-##### Example 2: Same table
+##### Example 2: Same table (with table title)
 
 | |       Grouping||
 |Left justified              |Centered Cells |Right justified|
@@ -289,7 +290,7 @@
 |New section| More           | Data            |
 |And more       | With an escaped '\|'            ||
 |And more       | xxx            | yyy             |
-[<br/> *Figure 2*]
+[*Figure 2*]
 
 ##### Example 3: Similar table (from reference)
 
