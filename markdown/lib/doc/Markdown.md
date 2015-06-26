@@ -72,29 +72,25 @@
 
 ### Lists
 
-  Precede lines with "\*", "\-" and/or "\+" to show them in a list:
-  
-  + Item 1
-  
-  - Item 2
-  
-  * Item 3
-  
-  * Item 4
-  
-  * Item 5
+  **_NOTE_: The Markdown plugin and GitHub seem to handle the formatting of
+  lists very differently.  It might take some effort to make any given list
+  show up properly in both settings.**
 
-  Precede lines with numbers for a numbered list:
+  Precede lines with "\*", "\-", "\+" and/or numbers to show them in a list:
   
-  1. Item 1
-  
-  2. Item 2
-  
-  3. Item 3
-  
-  4. Item 4
-  
-  5. Item 5
+1. Item 1
+* Item 1-1
+* Item 1-2
+3. Item 3
+- Item 4-1
+- Item 4-2
+5. Item 5
++ Item 6-1
++ Item 6-2
+7. Item 7
+
+  Note that numbered items are re-numbered for you, and that they're treated
+  differently in terms of line separation before and after each.
 
   **Nested lists**:
 
@@ -104,13 +100,19 @@
 
 2. Item 2
     * Subitem 2-1 (indented four spaces)
-      - Subitem 2-2 (indented six spaces)
-        * Subitem 2-2-2 (indented eight spaces)
+      - Subitem 2-1-1 (indented six spaces)
+        5. Subitem 2-1-1-1 (indented eight spaces)
+      - Subitem 2-1-2 (indented six spaces)
+        6. Subitem 2-1-2-1 (indented eight spaces)
+    * Subitem 2-2 (indented four spaces)
 
 3. Item 3
   - Subitem 3-1 (indented two spaces)
     * Subitem 3-1-1 (indented four spaces)
-      - Subitem 3-1-2 (indented six spaces)
+      - Subitem 3-1-1-1 (indented six spaces)
+    * Subitem 3-1-2 (indented four spaces)
+      - Subitem 3-1-2-1 (indented six spaces)
+  - Subitem 3-2 (indented two spaces)
 
   **Or**:
 
@@ -120,13 +122,19 @@
 
 * Item 2
     1. Subitem 2-1 (indented four spaces)
-      2. Subitem 2-2 (indented six spaces)
-        3. Subitem 2-2-2 (indented eight spaces)
+      2. Subitem 2-1-1 (indented six spaces)
+        + Subitem 2-1-1-1 (indented eight spaces)
+      4. Subitem 2-1-2 (indented six spaces)
+        + Subitem 2-1-2-1 (indented eight spaces)
+    6. Subitem 2-2 (indented four spaces)
 
 * Item 3
   1. Subitem 3-1 (indented two spaces)
     2. Subitem 3-1-1 (indented four spaces)
-      3. Subitem 3-1-2 (indented six spaces)
+      3. Subitem 3-1-1-1 (indented six spaces)
+    4. Subitem 3-1-1 (indented four spaces)
+      5. Subitem 3-1-1-1 (indented six spaces)
+  6 Subitem 3-2 (indented two spaces)
 
 <br/>
 
