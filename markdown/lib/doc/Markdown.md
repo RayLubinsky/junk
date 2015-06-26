@@ -78,19 +78,19 @@
 
   Precede lines with "\*", "\-", "\+" and/or numbers to show them in a list:
   
-1. Item 1
-* Item 1-1
-* Item 1-2
-
-3. Item 3
-- Item 4-1
-- Item 4-2
-
-5. Item 5
-+ Item 6-1
-+ Item 6-2
-
-7. Item 7
+  1. Item 1
+  * Item 1-1
+  * Item 1-2
+  
+  3. Item 3
+  - Item 4-1
+  - Item 4-2
+  
+  5. Item 5
+  + Item 6-1
+  + Item 6-2
+  
+  7. Item 7
 
 
   Note that numbered items are re-numbered for you, and that they're treated
