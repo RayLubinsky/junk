@@ -89,6 +89,7 @@
 + Item 6-2
 7. Item 7
 
+
   Note that numbered items are re-numbered for you, and that they're treated
   differently in terms of line separation before and after each.
 
