@@ -11,7 +11,8 @@
   each is linked to a more detailed description below.
   <br/><br/>
 
-|---------------------------|-------------------------------------------------|
+| Item                      | Description                                     |
+| ------------------------- | ----------------------------------------------- |
 | [app]       (#app)        | **Core Ruby-on-Rails application behaviors.**   |
 | [bin]       (#bin)        | Scripts and other executables.                  |
 | [config]    (#config)     | **Configuration and initialization code.**      |
@@ -34,7 +35,8 @@
   topics that are more global in scope.
   <br/><br/>
 
-|-----------------------------------|---------------------------------------------------------|
+| Item                              | Description                                             |
+| --------------------------------- | ------------------------------------------------------- |
 | [config/README.md]    [config]    | Conventions for \*.yml configuration files.             |
 | [lib/doc/README.md]   [lib_doc]   | Internal documentation overview.                        |
 | [lib/doc/Markdown.md] [markdown]  | Techniques for Markdown documentation with RubyMine.    |
