@@ -39,10 +39,10 @@ function Clean #
 cd "$DST_ROOT"
 
 # Copy /README.md and any other top-level Markdown file.
-cp "$SRC_ROOT"/*.md .
+cp -u "$SRC_ROOT"/*.md .
 
 # Copy /lib/doc completely
-cp -r "$SRC_ROOT"/lib/doc lib
+cp -u -r "$SRC_ROOT"/lib/doc lib
 
 # Find other *.md files
 SRC_TARGET=`
@@ -56,5 +56,5 @@ while read SRC_FILE ; do
 	DST_FILE=`echo "$SRC_FILE" | sed "s|^$SRC_ROOT/|$DST_ROOT/|"`
 	DST_DIR=`dirname "$DST_FILE"`
 	[ -d "$DST_DIR" ] || mkdir -p "$DST_DIR"
-	cp "$SRC_FILE" "$DST_FILE"
+	cp -u "$SRC_FILE" "$DST_FILE"
 done
