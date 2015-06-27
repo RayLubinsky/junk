@@ -1,0 +1,60 @@
+#! /bin/bash
+
+SRC_ROOT="$HOME/Work/sufia6_demo"
+DST_ROOT="$HOME/Work-test/junk/markdown"
+
+SRC_TARGET='
+app
+bin
+config
+#config.ru
+db
+#doc
+#Gemfile
+#Gemfile.lock
+#jetty
+lib
+#log
+public
+#Rakefile
+README.md
+#README.rdoc
+#restart_resque
+#solr_conf
+test
+#tmp
+#vendor
+'
+
+function Clean # 
+{
+	sed '
+		s/#.*//
+		s/^[ \t]*//
+		s/[ \t]*$//
+		/^$/d
+	'
+}
+
+cd "$DST_ROOT"
+
+# Copy /README.md and any other top-level Markdown file.
+cp "$SRC_ROOT"/*.md .
+
+# Copy /lib/doc completely
+cp -r "$SRC_ROOT"/lib/doc lib
+
+# Find other *.md files
+SRC_TARGET=`
+	echo "$SRC_TARGET" |
+	Clean |
+	sed 's|^|'"$SRC_ROOT"'/|' |
+	tr '\n' ' '
+`
+find $SRC_TARGET -name '*.md' |
+while read SRC_FILE ; do
+	DST_FILE=`echo "$SRC_FILE" | sed "s|^$SRC_ROOT/|$DST_ROOT/|"`
+	DST_DIR=`dirname "$DST_FILE"`
+	[ -d "$DST_DIR" ] || mkdir -p "$DST_DIR"
+	cp "$SRC_FILE" "$DST_FILE"
+done

@@ -1,4 +1,4 @@
-<!-- lib/doc/Markdown.md -->
+<!-- lib/doc/markdown.md -->
 
 # Documenting with Markdown
 
@@ -9,12 +9,6 @@
   displayed as formatted documentation files when browsing through a project.
   In particular, if a directory has a "README.md" file, that is formatted and
   displayed automatically by GitHub when browsing to that project directory.
-  
-  ![Valid XHTML](http://w3.org/Icons/valid-xhtml10)
-  
-  This page is ![valid XHTML][checkmark].
-  
-[checkmark]: http://w3.org/Icons/valid-xhtml10 "What are you smiling at?"
   
 ## Markdown plugin for RubyMine
 
@@ -78,9 +72,9 @@
 | Italic in Bold      | \_\_first \*middle\* last\_\_ | **N**     | Y       | Y       | __first *middle* last__ |
 | Italic in Bold      | \_\_first \_middle\_ last\_\_ | **N**     | Y       | Y       | __first _middle_ last__ |
 | Highlight in Bold   | \*\*first \`middle\` last\*\* | **N**     | Y       | Y       | **first `middle` last** |
-| Bold in Italic      | \*first \*\*middle\*\* last\* | **N**     | Y       | Y       | *first **middle** last* |
+| Bold in Italic      | \*first \*\*middle\*\* last\* | **N**     | Y       | **N**   | *first **middle** last* |
 | Bold in Italic      | \_first \*\*middle\*\* last\_ | **N**     | Y       | Y       | _first **middle** last_ |
-| Bold in Italic      | \*first \_\_middle\_\_ last\* | **N**     | Y       | **N**   | *first __middle__ last* |
+| Bold in Italic      | \*first \_\_middle\_\_ last\* | **N**     | Y       | Y       | *first __middle__ last* |
 | Bold in Italic      | \_first \_\_middle\_\_ last\_ | **N**     | Y       | **N**   | _first __middle__ last_ |
 | Highlight in Italic | \*first \`middle\` last\*     | **N**     | Y       | Y       | *first `middle` last* |
   
@@ -123,67 +117,63 @@
 
   Precede lines with "\*", "\-", "\+" and/or numbers to show them in a list:
   
-  1. Item 1 (1)
-  * Item 1-1 (\*)
-  * Item 1-2 (\*)
-  
-  3. Item 3 (3)
-  - Item 4-1 (\-)
-  - Item 4-2 (\-)
-  
-  5. Item 5 (5)
-  + Item 6-1 (\+)
-  + Item 6-2 (\+)
-  
-  7. Item 7 (7)
-
+  1. Item 1   (original tag: "1.")
+  * Item 2    (original tag: "\*")
+  * Item 3    (original tag: "\*")
+  4. Item 4   (original tag: "4.")
+  - Item 5    (original tag: "\-")
+  - Item 6    (original tag: "\-")
+  7. Item 7   (original tag: "7.")
+  + Item 8    (original tag: "\+")
+  + Item 9    (original tag: "\+")
+  10. Item 10 (original tag: "10.")
 
   Note that numbered items are re-numbered for you, and that they're treated
   differently in terms of line separation before and after each.
 
   **Nested lists**:
 
-18. Item 1 (18)
-  * Subitem 1-1 (indented two spaces) (\*)
-  * Subitem 1-2 (indented two spaces) (\*)
+18. Item 1                                        (original tag: "18.")
+  + Subitem 1-1 (indented two spaces)             (original tag: "\+")
+  * Subitem 1-2 (indented two spaces)             (original tag: "\*")
 
-22. Item 2 (22)
-  * Subitem 2-1 (indented four spaces) (\*)
-    - Subitem 2-1-1 (indented six spaces) (\-)
-      - Subitem 2-1-1-1 (indented eight spaces) (\-)
-    - Subitem 2-1-2 (indented six spaces) (\-)
-      - Subitem 2-1-2-1 (indented eight spaces) (\-)
-  * Subitem 2-2 (indented four spaces) (\*)
+22. Item 2 (original tag: "22.")
+    * Subitem 2-1 (indented four spaces)          (original tag: "\*")
+      + Subitem 2-1-1 (indented six spaces)       (original tag: "\+")
+        * Subitem 2-1-1-1 (indented eight spaces) (original tag: "\*")
+      - Subitem 2-1-2 (indented six spaces)       (original tag: "\-")
+        * Subitem 2-1-2-1 (indented eight spaces) (original tag: "\*")
+    * Subitem 2-2 (indented four spaces)          (original tag: "\*")
 
-3. Item 3
-  - Subitem 3-1 (indented two spaces) (\-)
-    * Subitem 3-1-1 (indented four spaces) (\*)
-      - Subitem 3-1-1-1 (indented six spaces) (\-)
-    * Subitem 3-1-2 (indented four spaces) (\*)
-      - Subitem 3-1-2-1 (indented six spaces) (\-)
-  - Subitem 3-2 (indented two spaces) (\-)
+33. Item 3 (original tag: "33.")
+  - Subitem 3-1 (indented two spaces)             (original tag: "\-")
+    * Subitem 3-1-1 (indented four spaces)        (original tag: "\*")
+      + Subitem 3-1-1-1 (indented six spaces)     (original tag: "\+")
+    * Subitem 3-1-2 (indented four spaces)        (original tag: "\*")
+      * Subitem 3-1-2-1 (indented six spaces)     (original tag: "\*")
+  + Subitem 3-2 (indented two spaces)             (original tag: "\+")
 
   **Or**:
 
-* Item 1 (\*)
-  1. Subitem 1-1 (indented two spaces) (1)
-  2. Subitem 1-2 (indented two spaces) (2)
+- Item 1                                          (original tag: "\-")
+  43. Subitem 1-1 (indented two spaces)           (original tag: "43.")
+  34. Subitem 1-2 (indented two spaces)           (original tag: "33.")
 
-* Item 2 (\*)
-  1. Subitem 2-1 (indented four spaces) (1)
-    2. Subitem 2-1-1 (indented six spaces) (2)
-      + Subitem 2-1-1-1 (indented eight spaces) (\+)
-    4. Subitem 2-1-2 (indented six spaces) (4)
-      + Subitem 2-1-2-1 (indented eight spaces) (\+)
-  6. Subitem 2-2 (indented four spaces) (6)
+* Item 2                                          (original tag: "\*")
+    1. Subitem 2-1 (indented four spaces)         (original tag: "1.")
+      2. Subitem 2-1-1 (indented six spaces)      (original tag: "2.")
+        + Subitem 2-1-1-1 (indented eight spaces) (original tag: "\+")
+      4. Subitem 2-1-2 (indented six spaces)      (original tag: "4.")
+        + Subitem 2-1-2-1 (indented eight spaces) (original tag: "\+")
+    6. Subitem 2-2 (indented four spaces) (6)
 
-* Item 3 (\*)
-  7. Subitem 3-1 (indented two spaces) (7)
-    8. Subitem 3-1-1 (indented four spaces) (8)
-      * Subitem 3-1-1-1 (indented six spaces) (\*)
-    9. Subitem 3-1-1 (indented four spaces) (9)
-      * Subitem 3-1-1-1 (indented six spaces) (\*)
-  10. Subitem 3-2 (indented two spaces) (10)
+* Item 3                                          (original tag: "\*")
+  7. Subitem 3-1 (indented two spaces)            (original tag: "7.")
+    8. Subitem 3-1-1 (indented four spaces)       (original tag: "8.")
+      * Subitem 3-1-1-1 (indented six spaces)     (original tag: "\*")
+    9. Subitem 3-1-1 (indented four spaces)       (original tag: "9.")
+      * Subitem 3-1-1-1 (indented six spaces)     (original tag: "\*")
+  10. Subitem 3-2 (indented two spaces)           (original tag: "10.")
 
 #### Markdown plugin Preview
 
@@ -194,7 +184,10 @@
 
 #### GitHub
 
-  GitHub Markdown is oriented toward 2-space indentation units.
+  GitHub Markdown is oriented toward 2-space indentation units, so every
+  indentation in the examples above changes the nesting depth.  This strategy
+  is heavily biased toward numbered lists; if a numbered item is the first
+  list item then the rest of the list will be treated as numbered.
 
 <br/>
 

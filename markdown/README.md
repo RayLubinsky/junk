@@ -39,8 +39,8 @@
 | --------------------------------- | ------------------------------------------------------- |
 | [config/README.md]    [config]    | Conventions for \*.yml configuration files.             |
 | [lib/doc/README.md]   [lib_doc]   | Internal documentation overview.                        |
-| [lib/doc/Markdown.md] [markdown]  | Techniques for Markdown documentation with RubyMine.    |
-| [lib/doc/Tips.md]     [tips]      | Tips for advanced Ruby programming.                     |
+| [lib/doc/markdown.md] [markdown]  | Techniques for Markdown documentation with RubyMine.    |
+| [lib/doc/tips.md]     [tips]      | Tips for advanced Ruby programming.                     |
 | [lib/ext/README.md]   [lib_ext]   | Conventions for overriding system and gem definitions.  |
 
 
@@ -213,6 +213,6 @@ REF --------- LINK -------------------------- TOOLTIP ------------------------>
 <!-- Topic link references used above:
 REF --------- LINK -------------------------- TOOLTIP ------------------------>
 [top]:        /README.md                      "Top-level README file"
-[markdown]:   /lib/doc/Markdown.md            "How to work with Markdown files"
-[tips]:       /lib/doc/Tips.md                "Advanced Ruby Tips'"
-[yaml]:       /lib/doc/YAML.md                "Conventions for config/*.yml files"
+[markdown]:   /lib/doc/markdown.md            "How to work with Markdown files"
+[tips]:       /lib/doc/tips.md                "Advanced Ruby Tips'"
+[yaml]:       /lib/doc/yaml.md                "Conventions for config/*.yml files"
