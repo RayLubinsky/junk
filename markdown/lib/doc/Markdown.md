@@ -123,19 +123,19 @@
 
   Precede lines with "\*", "\-", "\+" and/or numbers to show them in a list:
   
-1. Item 1
-* Item 1-1
-* Item 1-2
-
-3. Item 3
-- Item 4-1
-- Item 4-2
-
-5. Item 5
-+ Item 6-1
-+ Item 6-2
-
-7. Item 7
+  1. Item 1 (1)
+  * Item 1-1 (\*)
+  * Item 1-2 (\*)
+  
+  3. Item 3 (3)
+  - Item 4-1 (\-)
+  - Item 4-2 (\-)
+  
+  5. Item 5 (5)
+  + Item 6-1 (\+)
+  + Item 6-2 (\+)
+  
+  7. Item 7 (7)
 
 
   Note that numbered items are re-numbered for you, and that they're treated
@@ -143,47 +143,47 @@
 
   **Nested lists**:
 
-1. Item 1
-  * Subitem 1-1 (indented two spaces)
-  * Subitem 1-2 (indented two spaces)
+18. Item 1 (18)
+  * Subitem 1-1 (indented two spaces) (\*)
+  * Subitem 1-2 (indented two spaces) (\*)
 
-2. Item 2
-    * Subitem 2-1 (indented four spaces)
-      - Subitem 2-1-1 (indented six spaces)
-        5. Subitem 2-1-1-1 (indented eight spaces)
-      - Subitem 2-1-2 (indented six spaces)
-        6. Subitem 2-1-2-1 (indented eight spaces)
-    * Subitem 2-2 (indented four spaces)
+22. Item 2 (22)
+  * Subitem 2-1 (indented four spaces) (\*)
+    - Subitem 2-1-1 (indented six spaces) (\-)
+      - Subitem 2-1-1-1 (indented eight spaces) (\-)
+    - Subitem 2-1-2 (indented six spaces) (\-)
+      - Subitem 2-1-2-1 (indented eight spaces) (\-)
+  * Subitem 2-2 (indented four spaces) (\*)
 
 3. Item 3
-  - Subitem 3-1 (indented two spaces)
-    * Subitem 3-1-1 (indented four spaces)
-      - Subitem 3-1-1-1 (indented six spaces)
-    * Subitem 3-1-2 (indented four spaces)
-      - Subitem 3-1-2-1 (indented six spaces)
-  - Subitem 3-2 (indented two spaces)
+  - Subitem 3-1 (indented two spaces) (\-)
+    * Subitem 3-1-1 (indented four spaces) (\*)
+      - Subitem 3-1-1-1 (indented six spaces) (\-)
+    * Subitem 3-1-2 (indented four spaces) (\*)
+      - Subitem 3-1-2-1 (indented six spaces) (\-)
+  - Subitem 3-2 (indented two spaces) (\-)
 
   **Or**:
 
-* Item 1
-  1. Subitem 1-1 (indented two spaces)
-  2. Subitem 1-2 (indented two spaces)
+* Item 1 (\*)
+  1. Subitem 1-1 (indented two spaces) (1)
+  2. Subitem 1-2 (indented two spaces) (2)
 
-* Item 2
-    1. Subitem 2-1 (indented four spaces)
-      2. Subitem 2-1-1 (indented six spaces)
-        + Subitem 2-1-1-1 (indented eight spaces)
-      4. Subitem 2-1-2 (indented six spaces)
-        + Subitem 2-1-2-1 (indented eight spaces)
-    6. Subitem 2-2 (indented four spaces)
+* Item 2 (\*)
+  1. Subitem 2-1 (indented four spaces) (1)
+    2. Subitem 2-1-1 (indented six spaces) (2)
+      + Subitem 2-1-1-1 (indented eight spaces) (\+)
+    4. Subitem 2-1-2 (indented six spaces) (4)
+      + Subitem 2-1-2-1 (indented eight spaces) (\+)
+  6. Subitem 2-2 (indented four spaces) (6)
 
-* Item 3
-  1. Subitem 3-1 (indented two spaces)
-    2. Subitem 3-1-1 (indented four spaces)
-      3. Subitem 3-1-1-1 (indented six spaces)
-    4. Subitem 3-1-1 (indented four spaces)
-      5. Subitem 3-1-1-1 (indented six spaces)
-  6 Subitem 3-2 (indented two spaces)
+* Item 3 (\*)
+  7. Subitem 3-1 (indented two spaces) (7)
+    8. Subitem 3-1-1 (indented four spaces) (8)
+      * Subitem 3-1-1-1 (indented six spaces) (\*)
+    9. Subitem 3-1-1 (indented four spaces) (9)
+      * Subitem 3-1-1-1 (indented six spaces) (\*)
+  10. Subitem 3-2 (indented two spaces) (10)
 
 #### Markdown plugin Preview
 
