@@ -16,7 +16,7 @@
 
 ## Layout
 
-```
+```yaml
 index:
   general:                    Settings that are applicable to all environments
     base:
@@ -89,6 +89,3 @@ test:
   <br/><br/>
 
 ---
-
-[1]: /README.md         "Top-level README"
-[2]: /config/README.md  "Configuration conventions"

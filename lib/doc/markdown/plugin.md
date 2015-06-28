@@ -26,108 +26,20 @@
 
 ## Settings
 
-  The following are the preferred settings for this plugin.
+  The following are the preferred settings for this plugin:
   <br/><br/>
   
-| Extension             | Setting | Description                               |
-| --------------------- |:-------:| ----------------------------------------- |
-| Quotes                | **on**  | xxx |
-| Smarts                | **on**  | xxx |
-| Fenced code blocks    | **on**  | xxx |
-| Definitions           | **on**  | xxx |
-| Abbreviations         | **on**  | xxx |
-| Tables                | **on**  | xxx |
-| Auto links            | **on**  | xxx |
-| Wiki links            | **on**  | xxx |
-| Hard wraps            | off     | xxx |
-| Suppress inline HTML  | off     | xxx |
-| Suppress HTML blocks  | off     | xxx |
-| Strikethrough         | **on**  | xxx |
-
-  <br/>
-
----
-
-### Quotes
-
-  TODO
-
-### Smarts
-
-  TODO
-  
-  <br/>
-
----
-
-### Fenced code blocks
-
-  TODO
-  
-  <br/>
-
----
-
-### Definitions
-
-  TODO
-  
-  <br/>
-
----
-
-### Abbreviations
-
-  TODO
-  
-  <br/>
-
----
-
-### Tables
-
-  TODO
-  
-  <br/>
-
----
-
-### Auto links
-
-  TODO
-  
-  <br/>
-
----
-
-### Wiki links
-
-  TODO
-  
-  <br/>
-
----
-
-### Hard Wraps
-
-  TODO
-  
-  <br/>
-
----
-
-### Suppress inline HTML
-
-  TODO
-  
-  <br/>
-
----
-
-### Suppress HTML blocks
-
-  TODO
-  
-  <br/>
-
----
+| Extension             | Setting |
+| --------------------- |:-------:|
+| Quotes                | **on**  |
+| Smarts                | **on**  |
+| Fenced code blocks    | **on**  |
+| Definitions           | **on**  |
+| Abbreviations         | **on**  |
+| Tables                | **on**  |
+| Auto links            | **on**  |
+| Wiki links            | **on**  |
+| Hard wraps            | off     |
+| Suppress inline HTML  | off     |
+| Suppress HTML blocks  | off     |
+| Strikethrough         | **on**  |

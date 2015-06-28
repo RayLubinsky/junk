@@ -9,29 +9,29 @@
 
   This is a brief description of the items in this top-level directory;
   each is linked to a more detailed description below.
-  Additionally, the [lib/doc][lib_doc] directory contains more detailed
+  Additionally, the [/lib/doc][lib_doc] directory contains more detailed
   documentation on concepts, conventions and techniques.
   <br/><br/>
 
 | Item                      | Description                                     |
 | ------------------------- | ----------------------------------------------- |
-| [app]       (#app)        | **Core Ruby-on-Rails application behaviors.**   |
-| [bin]       (#bin)        | Scripts and other executables.                  |
-| [config]    (#config)     | **Configuration and initialization code.**      |
-| [db]        (#db)         | **Database schema and migrations.**             |
-| [doc]       (#doc)        | Optional output from "rdoc" or "sdoc".          |
-| [jetty]     (#jetty)      | Development-only instance of hydra-jetty.       |
-| [lib]       (#lib)        | **Site-specific modules and classes.**          |
-| [log]       (#log)        | Log output from Rails and other applications.   |
-| [public]    (#public)     | **Root directory of the application web site.** |
-| [solr_conf] (#solr_conf)  | Original(Sufia) Solr configuration files.       |
-| [test]      (#test)       | Text fixtures for rspec *et. al.*.              |
-| [tmp]       (#tmp)        | Temporary files.                                |
-| [vendor]    (#vendor)     | Local copies of modified gems.                  |
+| [/app]       (#app)       | **Core Ruby-on-Rails application behaviors.**   |
+| [/bin]       (#bin)       | Scripts and other executables.                  |
+| [/config]    (#config)    | **Configuration and initialization code.**      |
+| [/db]        (#db)        | **Database schema and migrations.**             |
+| [/doc]       (#doc)       | Optional output from "rdoc" or "sdoc".          |
+| [/jetty]     (#jetty)     | Development-only instance of hydra-jetty.       |
+| [/lib]       (#lib)       | **Site-specific modules and classes.**          |
+| [/log]       (#log)       | Log output from Rails and other applications.   |
+| [/public]    (#public)    | **Root directory of the application web site.** |
+| [/solr_conf] (#solr_conf) | Original(Sufia) Solr configuration files.       |
+| [/test]      (#test)      | Text fixtures for rspec *et. al.*.              |
+| [/tmp]       (#tmp)       | Temporary files.                                |
+| [/vendor]    (#vendor)    | Local copies of modified gems.                  |
 
 ## Code directories
 
-> These directories contain items that are central to the functioning of the
+  These directories contain items that are central to the functioning of the
   deployed production-mode application, and which will change over time through
   development and maintenance.
 
@@ -39,17 +39,17 @@
 
   The original contents of this directory was established by the Blacklight,
   Blacklight Advanced Search, Devise, Hydra Head, and Sufia generators.
+  
+> ###### Guidelines ![Developer Information][dev_info]
 
-###### `Guidelines`
-
-  Going forward, as much as possible, we will minimize the amount of custom
+> Going forward, as much as possible, we will minimize the amount of custom
   code that is created in this directory by creating overriding modules and
-  classes in [/lib][lib], [lib/uva][lib_uva], and [lib/libra][lib_libra] which
-  will be mixed in to the code under [/app][app] using "require", "include",
-  "extend", and other Ruby mechanisms that support code modularity.
+  classes in [/lib][lib], [/lib/uva][lib_uva], and [/lib/libra][lib_libra]
+  which will be mixed in to the code under [/app][app] using "require",
+  "include", "extend", and other Ruby mechanisms that support code modularity.
   See the [developer documentation][lib_doc] for details on these strategies.
   
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/config][config] - Configuration and initialization     <a name="config"/>
 
@@ -61,29 +61,15 @@
   to providing configuration values for system objects prior to steady-state
   operation.
 
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Although there is a fuzzy interface between code and data, particularly in
-  modern languages like Ruby, we will strive to separate them as much as
-  possible by ensuring that literal values are maintained in configuration
-  data files rather than directly in code files.
-  See the [developer documentation][lib_doc] for details on these strategies.
-
->###### `Guidelines`
 > Although there is a fuzzy interface between code and data, particularly in
   modern languages like Ruby, we will strive to separate them as much as
   possible by ensuring that literal values are maintained in configuration
   data files rather than directly in code files.
   See the [developer documentation][lib_doc] for details on these strategies.
 
-###### `Guidelines`
-> Although there is a fuzzy interface between code and data, particularly in
-  modern languages like Ruby, we will strive to separate them as much as
-  possible by ensuring that literal values are maintained in configuration
-  data files rather than directly in code files.
-  See the [developer documentation][lib_doc] for details on these strategies.
-
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/db][db] - Database schema and migrations                   <a name="db"/>
 
@@ -92,9 +78,9 @@
   The most important information, however, is [schema.rb](/db/schema.rb) which
   describes the current state of database schemas for the application.
 
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Database tables are a fundamental concept in Rails.
+> Database tables are a fundamental concept in Rails.
   Whenever there is need for a set of information that should be
   (a) always available to the application, and
   (b) have potential use-cases which require dynamic change,
@@ -102,73 +88,73 @@
   in a database table.
   See the [developer documentation][lib_doc] for details on these strategies.
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/lib][lib] - Site-specific modules, classes and definitions <a name="lib"/>
 
   This directory contains code and data which is unique to the application
   (Libra) and/or unique to the deployment environment (UVa Library).
 
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Although it is tempting to simply add unique application behaviors directly
+> Although it is tempting to simply add unique application behaviors directly
   in the [/app][app] directory hierarchy, encapsulating that information in
   the [/lib][lib] directory hierarchy has benefits:
 
-  * Avoids the possibility that gem generators change the meaning of your code
-  * Supports the possibility of code sharing with future UVa Library applications
-  * Makes the code more comprehensible to future developers.
+> * Avoids the possibility that gem generators change the meaning of your code
+> * Supports the possibility of code sharing with future UVa Library applications
+> * Makes the code more comprehensible to future developers.
 
-  See the [developer documentation][lib_doc] for details on these strategies.
+> See the [developer documentation][lib_doc] for details on these strategies.
   
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
   
 ---
 
 ## Other directories
 
-> These directories contain items that are central to the functioning of the
+  These directories contain items that are central to the functioning of the
   deployed production-mode application, but rarely change.
 
 ### [/bin][bin] - Scripts and executables                       <a name="bin"/>
 
   This directory contains system executable code, mostly in the form of scripts
-  that are run to perform 
+  that are run to perform basic operational functions.
 
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Add executables here to provide tools for development, testing and production
+> Add executables here to provide tools for development, testing and production
   as needed.  Although the system-provided programs are Ruby scripts, new items
   may be shell scripts, compiled executables, etc.
   
-  However, if the task that is being implemented is highly integrated with the
+> However, if the task that is being implemented is highly integrated with the
   application (particularly if it relies on the results of rake tasks), a
   better approach might be to create a Rake task in [/lib/tasks][lib_tasks]
   which will have direct access to the information and would not be reliant on
   extracting the information from the output of Rake tasks.
   
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/public][public] - Web application static files         <a name="public"/>
   
   In production mode, these files are never handled by the Rails application
   itself; but are served up by the web server application (Apache).
   
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Limit the files here to the ones that are truly static, since this directory
+> Limit the files here to the ones that are truly static, since this directory
   is effectively off-limits to the production-mode application.
   If there are benefits to dynamic generation of the contents of a file, it
   may be preferable to add logic to the Rails application to handle the route
   to that file rather than ceding control to the web server.
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
   
 ---
 
 ## Operational directories
 
-> These directories are central to the functioning of the deployed
+  These directories are central to the functioning of the deployed
   production-mode application, but either rarely change or their change is
   managed automatically by the running application.
 
@@ -180,9 +166,9 @@
   Other applications may also be configured to send their output to this
   directory.
     
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Allowing the production-mode application to write into the code directory
+> Allowing the production-mode application to write into the code directory
   hierarchy might not be the best approach for performance and administrative
   reasons.
   One solution might be to replace [/log] with a symbolic link to a location on
@@ -190,28 +176,28 @@
   We may ultimately want to make use of logging mechanisms that do not simply
   write STDOUT and STDERR to file(s) in this directory.
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/tmp][tmp] - Temporary files                               <a name="tmp"/>
 
   The temporary directory holds transient and cached information for the
   running application.
       
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Allowing the production-mode application to write into the code directory
+> Allowing the production-mode application to write into the code directory
   hierarchy might not be the best approach for performance and administrative
   reasons.
   One solution might be to replace [/tmp] with a symbolic link to a location on
   a different partition (perhaps even via NFS).
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
   
 ---
 
 ## Development subdirectories
 
-> These directories contain items are only relevant in non-production
+  These directories contain items are only relevant in non-production
   environments.
 
 ### [/test][test] - Automated testing support                  <a name="test"/>
@@ -219,65 +205,96 @@
   This directory supports automated testing by providing a location to manage
   test fixtures and test cases.
 
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  Test development with [RSpec](http://rspec.info/) provides a basic framework
+> Test development with [RSpec](http://rspec.info/) provides a basic framework
   for automated testing, but requires some work to come up with a set of tests
   that exercise the code in a useful way.
   
-  At a minimum, the tests should be able to detect regression (when known-good
+> At a minimum, the tests should be able to detect regression (when known-good
   code breaks due to recent changes in the code base).
   However, the promise of "Test Driven Development" is that the tests
   themselves should express the requirements of the system; in this view a
   successful run of the tests should be an assurance that the system has been
   designed in accordance with the requirements.
   
-  See the [developer documentation][lib_doc] for details on these strategies.
+> See the [developer documentation][lib_doc] for details on these strategies.
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/vendor][vendor] - Customized local gem versions        <a name="vendor"/>
 
   This directories contains gems that have been modified by Sufia and/or Hydra
   developers.
   
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  In general, we will avoid modifying the contents of this directory.
+> In general, we will avoid modifying the contents of this directory.
   The preferred strategy for overriding gem functionality is to add "patch
   code" to [/lib/ext][lib_ext] to limit the changes to just the definitions
   that need to be modified.
 
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/doc][doc] - Optional generated documentation              <a name="doc"/>
 
   This directory is created by the "rdoc" or "sdoc" programs to provide an
   HTML-formatted display of programming documentation extracted from the code.
   
-###### `Guidelines`
+> ###### Guidelines ![Developer Information][dev_info]
 
-  This directory may or may not appear in the code directory and can be removed
+> This directory may or may not appear in the code directory and can be removed
   at will because it is easily re-creatable.
   
-  [Back to top](#top)
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/jetty][jetty] - Development-only Jetty/Solr/Fedora      <a name="jetty"/>
 
-  This directory is generated by [jettywrapper](https://rubygems.org/gems/jettywrapper)
-  
-  [Back to top](#top)
+  This directory is generated by [hydra-jetty](https://github.com/projecthydra/hydra-jetty)
+  to provide local Solr and Fedora instances.
+
+> ###### Guidelines ![Developer Information][dev_info]
+
+> Nothing in this directory is used in the deployed application for any
+  environment.  Deployed production, development and test environments rely on
+  separately-maintained Solr and Fedora instances.
+
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
 
 ### [/solr_conf][solr_conf] - Original Sufia Solr configuration files <a name="solr_conf"/>
 
-  TODO
-  
-  [Back to top](#top)
+  This directory contains Sufia Solr configuration files that are used to
+  initialize the generic [/jetty][jetty] directory.
+
+> ###### Guidelines ![Developer Information][dev_info]
+
+> Nothing in this directory is used in the deployed application for any
+  environment.
+
+  <div style="text-align:right">\[[Back to top](#top)\]</div>
+
+## Index                                                      <a name="index"/>
+
+  All Markdown documents in this project.
+  <br/><br/>
+
+| Item                                      | Description                                             |
+| ----------------------------------------- | ------------------------------------------------------- |
+| [/README.md]                  (#index)    | This file.                                              |
+| [/config/README.md]           [config]    | Conventions for \*.yml configuration files.             |
+| [/lib/README.md]              [lib]       | Site-specific modules, classes and definitions.         |
+| [/lib/ext/README.md]          [lib_ext]   | Conventions for overriding system and gem definitions.  |
+| [/lib/doc/README.md]          [lib_doc]   | Developer documentation overview (this file).           |
+| [/lib/doc/markdown.md]        [markdown]  | Techniques for Markdown documentation with RubyMine.    |
+| [/lib/doc/markdown/plugin.md] [plugin]    | Markdown plugin for RubyMine.                           |
+| [/lib/doc/tips.md]            [tips]      | Tips for advanced Ruby programming.                     |
+| [/lib/doc/yaml.md]            [yaml]      | Conventions for YAML configuration files.               |
   
 <!--  Markdown reference definitions in this file should be maintained so that
-      the entire set of lines below this comment can be copied and pasted into
-      another Markdown file to provide all of the needed references with
-      consistent naming. -->
+      the entire set of lines below this comment can used as a template for
+      other Markdown files.  (However, because the references have to be
+      relative to the page, the links will have to be adjusted so that the
+      leading '/' is replaced with the relative path.) -->
 
 <!-----------------------------------------------------------------------------
 Directory link references used above:
@@ -323,6 +340,8 @@ REF --------- LINK -------------------------- TOOLTIP ------------------------>
 <!-- Topic link references used above:
 REF --------- LINK -------------------------- TOOLTIP ------------------------>
 [top]:        /README.md                      "Top-level README file"
+[dev_info]:   /lib/doc/images/info_16x16.png  "Developer information"
 [markdown]:   /lib/doc/markdown.md            "How to work with Markdown files"
+[plugin]:     /lib/doc/markdown/plugin.md     "Markdown Plugin for RubyMine"
 [tips]:       /lib/doc/tips.md                "Advanced Ruby Tips'"
 [yaml]:       /lib/doc/yaml.md                "Conventions for config/*.yml files"

@@ -38,8 +38,8 @@
 
   - Surround text with a single _underline_ or *star* for *italic* text.
   - Surround text with double _underlines_ or *stars* for **bold** text.
-  - Surround text with backticks for `highlighted` text (which is treated as
-    code so no formatted honored within the backticks).
+  - Surround text with backticks for `highlighted` text (used for code literals
+    so format characters are not processed).
   
 #### Styling words
 
@@ -78,7 +78,7 @@
 | Bold in Italic      | \_first \_\_middle\_\_ last\_ | **N**     | Y       | **N**   | _first __middle__ last_ |
 | Highlight in Italic | \*first \`middle\` last\*     | **N**     | Y       | Y       | *first `middle` last* |
   
-#### Error cases
+#### Edge cases
 
   *If a space precedes the final star... *
   the star is displayed and text is still italic.*            <br/>
@@ -412,14 +412,14 @@
 
 ### References
 
-  [What is Markdown?]     (http://whatismarkdown.com/)                                      <br/>
-  [Markdown syntax]       [markdown]                                                        <br/>
-  [PHP Markdown Extra]    [php_extra]                                                       <br/>
-  [MultiMarkdown tables]  [tables]                                                          <br/>
-  [Pandoc strikeout]      [strikeout]                                                       <br/>
-  [GitHub Markdown]       [github]                                                          <br/>
-  [Markdown Basics]       (https://help.github.com/articles/markdown-basics/)               <br/>
-  [Mastering Markdown]    (https://guides.github.com/features/mastering-markdown/)          <br/>
+  [What is Markdown?]     (http://whatismarkdown.com/)                              <br/>
+  [Markdown syntax]       [markdown]                                                <br/>
+  [PHP Markdown Extra]    [php_extra]                                               <br/>
+  [MultiMarkdown tables]  [tables]                                                  <br/>
+  [Pandoc strikeout]      [strikeout]                                               <br/>
+  [GitHub Markdown]       [github]                                                  <br/>
+  [Markdown Basics]       (https://help.github.com/articles/markdown-basics/)       <br/>
+  [Mastering Markdown]    (https://guides.github.com/features/mastering-markdown/)  <br/>
 
 <!-- Topic link references used above:
 REF --------- LINK -------------------------- TOOLTIP ------------------------>

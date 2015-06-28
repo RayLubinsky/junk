@@ -10,14 +10,13 @@
   need to be in place early enough in the initialization process so that the
   overridden definitions will be in effect as soon as possible.
   
-  Instead, we will maintain the definitions under [lib/ext][lib_ext] and only
+  Instead, we will maintain the definitions under [/lib/ext][lib_ext] and only
   include code under config/initializers to require 'lib/ext'.
 
-## Layout
+## Contents                                                     <a name="top"/>
 
-  This is a brief description of the items in this top-level directory;
-  each is linked to a more detailed description below.
-  <br>&nbsp;</br>
+  This is a brief description of the items in this directory.
+  <br/><br/>
 
 | File or directory     | Description                                       | Usage                   |
 | --------------------- | ------------------------------------------------- | ----------------------- |
@@ -29,16 +28,34 @@
 | [rails.rb] (rails.rb) | Load all files from the lib/ext/ruby directory.   | require 'lib/ext/ruby'  |
 | [ruby.rb]  (ruby.rb)  | Load all files from the lib/ext/rails directory.  | require 'lib/ext/rails' |
 
-## Special Notes
+## Featured Items
 
-### [rails/envclass.rb](rails/envclass.rb)
+### [/lib/ext/rails/envclass.rb][envclass]
 
-  This code replaces **Rails.env** and **Rails.env=*** with class methods that
-  create instance of **Rails::EnvClass**, which augments
-  **ActiveSupport::StringInquirer** to treat all variations on the "production"
-  environment as "production".
+  This code replaces **`Rails.env`** and **`Rails.env=`** with class methods
+  that create an instance of **`Rails::EnvClass`**, which augments
+  `ActiveSupport::StringInquirer` so that all variations on the standard
+  environment names are reported appropriately.
+  (For example, `Rails.env.production?` returns true for both "production"
+  and "uvalib_production".
+
+### [/lib/ext/ruby/string/snake_case.rb][snake_case]
+
+  Adds method **`String#snake_case`** to translate strings of the form
+  "MultiPartName" into "multi_part_name".
+
+### [/lib/ext/ruby/integer/constants.rb][constants]
+
+  Adds constants **`Integer::MAX`** and **`Integer::MIN`** for the largest and
+  smallest native `Fixnum` values.
 
 <!-----------------------------------------------------------------------------
 Directory link references used above:
 REF --------- LINK -------------------------- TOOLTIP ------------------------>
-[lib_ext]:    /lib/ext/README.md              "Extensions and overrides"
+[lib_ext]:    ../ext/README.md                "Extensions and overrides"
+
+<!-- Topic link references used above:
+REF --------- LINK -------------------------- TOOLTIP ------------------------>
+[envclass]:   rails/envclass.rb               "Rails::EnvClass"
+[snake_case]: ruby/string/snake_case.rb       "String#snake_case"
+[constants]:  ruby/integer/constants.rb       "Integer::MAX, Integer::MIN"
