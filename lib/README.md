@@ -4,15 +4,14 @@
 
   This is the location for code that should exist independently from code in
   the [/app][app] directory.
-  In some situations, this is a clear distinction -- for example:
+  In many situations, the choice between putting a module or class somewhere
+  under [/app][app] versus somewhere under [/lib][lib] is fairly clear --
+  for example:
   <br/><br/>
 
         Libra interactions with SIS
         Virgo interactions with Firehose
         Support for UVaLib configuration mechanisms
-
-  In other cases, the choice between putting a module or class somewhere under
-  [/app][app] versus somewhere under [/lib][lib] is less clear-cut.
 
   The general intent is that code which is focused on practices and/or services
   unique to UVa Library (and therefore code that might be applicable across a
@@ -22,7 +21,6 @@
   behaviors or to implement UVa-specific behaviors and then use "require" and
   "include" within [/app][app] files to mix in that code into the appropriate
   places.
-  
 
 # Contents                                                      <a name="top"/>
 
@@ -39,45 +37,49 @@
 | [tasks]   (#tasks)  | Libra rake tasks.                             |
 | [uva]     (#uva)    | UVa Library-specific modules and classes.     |
 
-## [lib/assets][lib_asst] - UVa Library images, Javascript, CSS <a name="assets"/>
-
-  TODO
-  
-  [Back to top](#top)
-
 ## [lib/doc][lib_doc] - Internal developer documentation        <a name="doc"/>
 
-  This directory is the location for development notes that are applicable
-  across the entire project.
+  Development notes that are applicable across the entire project. 
   
-  Individual directories may also have their own README.md (or other Markdown
-  files) where it is important to describe the usage of the files within that
-  directory, or to document conventions in force that may not be evident within
-  the code itself.
-  
-  [Back to top](#top)
-
-## [lib/ext][lib_ext] - System and gem overrides                <a name="ext"/>
-
-  TODO
+  Individual directories may also have their own README.md where it is
+  important to note the usage of the files within that directory, or to
+  document conventions in force that may not be evident within the code itself.
   
   [Back to top](#top)
 
 ## [lib/libra][lib_libra] - Libra-specific modules and classes <a name="libra"/>
 
-  TODO
-  
-  [Back to top](#top)
-
-## [lib/tasks][lib_tasks] - Libra rake tasks                  <a name="tasks"/>
-
-  TODO
+  The location for code that is specific to this application.  In some cases,
+  this will be code that is unique to the application.  In other cases, this
+  will be application-specific variations of definitions from [lib/uva][lib_uva].
   
   [Back to top](#top)
 
 ## [lib/uva][lib_uva] - UVa Library-specific modules and classes <a name="uva"/>
 
-  TODO
+  The location for code which may be of general use to UVa Library applications
+  (including this one).
+  
+  [Back to top](#top)
+
+## [lib/ext][lib_ext] - System and gem overrides                <a name="ext"/>
+
+  This directory is the location for core extensions, gem overrides and other
+  "monkey patches".  Put definitions here; if required during initialization,
+  use "require" references to this code where needed in /config/initializers.
+  
+  [Back to top](#top)
+
+## [lib/tasks][lib_tasks] - Libra rake tasks                  <a name="tasks"/>
+
+  Rake tasks to support Libra development and operations.
+  
+  [Back to top](#top)
+
+## [lib/assets][lib_asst] - UVa Library images, Javascript, CSS <a name="assets"/>
+
+  The location for assets (images, Javascript, CSS) that are specific to
+  UVa Library or to the application.
   
   [Back to top](#top)
 

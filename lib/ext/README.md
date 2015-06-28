@@ -33,10 +33,10 @@
 
 ### [rails/envclass.rb](rails/envclass.rb)
 
-This code replaces **Rails.env** and **Rails.env=*** with class methods that
-create instance of **Rails::EnvClass**, which augments
-**ActiveSupport::StringInquirer** to treat all variations on the "production"
-environment as "production".
+  This code replaces **Rails.env** and **Rails.env=*** with class methods that
+  create instance of **Rails::EnvClass**, which augments
+  **ActiveSupport::StringInquirer** to treat all variations on the "production"
+  environment as "production".
 
 <!-----------------------------------------------------------------------------
 Directory link references used above:
