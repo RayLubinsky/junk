@@ -21,7 +21,11 @@
   "Markdown" entry and press "OK" to install the plugin.  After installation,
   options for the plugin will found in the **Other Settings** selection.
   
+<<<<<<< HEAD
   ![Markdown settings image](images/MarkdownPlugin50&#37;.png)
+=======
+  ![Markdown settings image](images/MarkdownPlugin_50pct.png)
+>>>>>>> Remove percent character from image names
   <br/>[Full size image](images/MarkdownPlugin.png)
 
 ## Settings                                                <a name="settings"/>
