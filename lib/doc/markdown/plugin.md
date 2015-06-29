@@ -21,7 +21,7 @@
   "Markdown" entry and press "OK" to install the plugin.  After installation,
   options for the plugin will found in the **Other Settings** selection.
   
-  ![Markdown settings image](images/MarkdownPlugin50%25.png)
+  ![Markdown settings image](images/MarkdownPlugin50&#37;.png)
   <br/>[Full size image](images/MarkdownPlugin.png)
 
 ## Settings                                                <a name="settings"/>
