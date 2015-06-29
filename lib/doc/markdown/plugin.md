@@ -1,6 +1,6 @@
 <!-- lib/doc/markdown/plugin.md -->
   
-# Markdown Plugin for RubyMine
+# Markdown Plugin for RubyMine                                  <a name="top"/>
 
   If you install the Markdown plugin in RubyMine (File|Settings|Plugins) you
   can more fully use Markdown files for documentation purposes while coding or
@@ -14,7 +14,7 @@
     This adds adds a "Preview" tab to the bottom of the window for a Markdown
     file which displays the file in formatted form.
 
-## Installation
+## Installation                                        <a name="installation"/>
 
   To add these features, install the Markdown plugin from **File|Settings**
   under the **Plugins** selection.  Check the box to the right of the
@@ -24,7 +24,7 @@
   ![Markdown settings image](images/MarkdownPlugin50%.png)
   <br/>[Full size image](images/MarkdownPlugin.png)
 
-## Settings
+## Settings                                                <a name="settings"/>
 
   The following are the preferred settings for this plugin:
   <br/><br/>
@@ -43,3 +43,5 @@
 | Suppress inline HTML  | off     |
 | Suppress HTML blocks  | off     |
 | Strikethrough         | **on**  |
+
+  \[[*Back to top*](#top)\]

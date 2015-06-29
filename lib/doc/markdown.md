@@ -10,7 +10,7 @@
   In particular, if a directory has a "README.md" file, that is formatted and
   displayed automatically by GitHub when browsing to that project directory.
   
-## Markdown plugin for RubyMine
+## Markdown plugin for RubyMine                              <a name="plugin"/>
 
   If you install the Markdown plugin in RubyMine (File|Settings|Plugins) you
   can more fully use Markdown files for documentation purposes while coding or
@@ -29,12 +29,25 @@
   "Markdown" entry and press "OK" to install the plugin.  After installation,
   options for the plugin will found in the **Other Settings** selection.
 
-## Markdown Features
+## Markdown Features                                            <a name="top"/>
 
   Both GitHub and the RubyMine Markdown plugin implement extensions to the
   original [Markdown][markdown].
+  
+  [Styling text]        (#styling)        <br/>
+  [Horizontal rules]    (#hrule)          <br/>
+  [Lists]               (#lists)          <br/>
+  [Block quotes]        (#block_quotes)   <br/>
+  [Code blocks]         (#code_blocks)    <br/>
+  [Fenced Code Blocks]  (#fenced)         <br/>
+  [Definition Lists]    (#definitions)    <br/>
+  [Abbreviations]       (#abbreviations)  <br/>
+  [Tables]              (#tables)         <br/>
+  [Strikethrough]       (#strikethrough)  <br/>
+  
+  See [References](#references) for further reading.
 
-### Styling text
+### Styling text                                            <a name="styling"/>
 
   - Surround text with a single _underline_ or *star* for *italic* text.
   - Surround text with double _underlines_ or *stars* for **bold** text.
@@ -91,12 +104,12 @@
   Note that `   highlighting works even with spaces next to backticks    `
   but space after the leading backtick and before the final backtick is
   removed. <br/>
-  
-  <br/>
+
+  \[[*Back to top*](#top)\]
 
 ---
 
-### Horizontal rules
+### Horizontal rules                                          <a name="hrule"/>
 
   Any of the following lines will make a horizontal separator line:
 
@@ -105,11 +118,11 @@
       ***     Three or more "*" in a row
       * * *   Three or more "* " in a row
 
-  <br/>
+  \[[*Back to top*](#top)\]
 
 ---
 
-### Lists
+### Lists                                                     <a name="lists"/>
 
   **_NOTE_: The Markdown plugin and GitHub seem to handle the formatting of
   lists very differently.  It might take some effort to make any given list
@@ -189,11 +202,11 @@
   is heavily biased toward numbered lists; if a numbered item is the first
   list item then the rest of the list will be treated as numbered.
 
-<br/>
+  \[[*Back to top*](#top)\]
 
 ---
 
-### Block quotes
+### Block quotes                                       <a name="block_quotes"/>
 
   Precede lines with "\>" to group into a shaded box.  Style processing will
   occur within the lines.
@@ -235,11 +248,11 @@
 >   <br/>
 > Subitem (b)     <br/>
 
-<br/>
+  \[[*Back to top*](#top)\]
 
 ---
 
-### Code blocks
+### Code blocks                                         <a name="code_blocks"/>
 
   Lines indented by four spaces are displayed as a shaded block without
   additional formatting.
@@ -259,18 +272,19 @@
     general:                    Settings that are applicable to all environments
       base:
 ```
-<br/>
+
+  \[[*Back to top*](#top)\]
 
 ---
 
-## Markdown Extensions
+## Markdown Extensions                                   <a name="extensions"/>
 
   In addition to standard Markdown syntax, the RubyMine plugin support several
   additional syntax features listed below.  These are optional features which
   can be turned on or turned off through the **Markdown** setting panel
   accessed from **File|Settings** under the **Other Settings** selection. 
 
-### Fenced Code Blocks (PHP Markdown Extra style)
+### Fenced Code Blocks (PHP Markdown Extra style)            <a name="fenced"/>
 
   Everything between two lines with "~~~" are displayed in a box without
   additional formatting.
@@ -284,13 +298,12 @@
   }
 ~~~
 
-  *Reference*:
-  https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks <br/>
-  <br/>
+  \[[*Back to top*](#top)\] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  *Reference*: https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
 
 ---
 
-### Definition Lists (PHP Markdown Extra style)
+### Definition Lists (PHP Markdown Extra style)         <a name="definitions"/>
 
   Single-line term followed by a definition line consisting of a colon and text.
   
@@ -300,13 +313,13 @@
   
   Orange
   :   The fruit of an evergreen tree of the genus Citrus.
-  
-  *Reference*: https://michelf.ca/projects/php-markdown/extra/#def-list <br/>
-  <br/>
+
+  \[[*Back to top*](#top)\] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  *Reference*: https://michelf.ca/projects/php-markdown/extra/#def-list
 
 ---
 
-### Abbreviations (PHP Markdown Extra style)
+### Abbreviations (PHP Markdown Extra style)          <a name="abbreviations"/>
 
   **_NOTE_: This does not seem to work in the Markdown Preview tab**
 
@@ -323,13 +336,13 @@
   
   Abbreviation for INST expanded: INST <br/>
   Abbreviation for PROG expanded: PROG <br/>
-  
-  *Reference*: https://michelf.ca/projects/php-markdown/extra/#abbr <br/>
-  <br/>
+
+  \[[*Back to top*](#top)\] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  *Reference*: https://michelf.ca/projects/php-markdown/extra/#abbr
 
 ---
 
-### Tables (MultiMarkdown style)
+### Tables (MultiMarkdown style)                             <a name="tables"/>
 
   You can create tables that are readable as text and also formatted nicely as
   Markdown viewable through the Markdown plugin "Preview" tab and through the
@@ -348,8 +361,6 @@
   
   **Table titles**
   :   GitHub does not honor the \[title\] construct that follows the table.
-
-  *Reference*: http://fletcher.github.io/MultiMarkdown-4/tables.html <br/>
 
 ##### Example 1: For easier reading as a text file
 
@@ -390,11 +401,12 @@
   New section   |     More      |          Data |
   And more      | With an escaped '\|'         ||
 
-<br/>
+  \[[*Back to top*](#top)\] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  *Reference*: http://fletcher.github.io/MultiMarkdown-4/tables.html
 
 ---
 
-### Strikethrough (Pandoc/GitHub style)
+### Strikethrough (Pandoc/GitHub style)               <a name="strikethrough"/>
 
   **_NOTE_: This does not seem to work in the Markdown Preview tab**
 
@@ -404,13 +416,13 @@
   ~~This is a deleted sentence.~~                               <br/>
   This is ~~deleted text~~ in a sentence.                       <br/>
   This is ~~ not deleted text ~~ just text with literal tildes. <br/>
-  
-  *Reference*: http://pandoc.org/demo/example9/pandocs-markdown.html#strikeout <br/>
-  <br/>
+
+  \[[*Back to top*](#top)\] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  *Reference*: http://pandoc.org/demo/example9/pandocs-markdown.html#strikeout
 
 ---
 
-### References
+### References                                           <a name="references"/>
 
   [What is Markdown?]     (http://whatismarkdown.com/)                              <br/>
   [Markdown syntax]       [markdown]                                                <br/>
@@ -420,6 +432,8 @@
   [GitHub Markdown]       [github]                                                  <br/>
   [Markdown Basics]       (https://help.github.com/articles/markdown-basics/)       <br/>
   [Mastering Markdown]    (https://guides.github.com/features/mastering-markdown/)  <br/>
+
+  \[[*Back to top*](#top)\]
 
 <!-- Topic link references used above:
 REF --------- LINK -------------------------- TOOLTIP ------------------------>

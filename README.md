@@ -34,6 +34,9 @@
   These directories contain items that are central to the functioning of the
   deployed production-mode application, and which will change over time through
   development and maintenance.
+  <br/><br/>
+  
+---
 
 ### [/app][app] - Rails application core                        <a name="app"/>
 
@@ -49,7 +52,9 @@
   "include", "extend", and other Ruby mechanisms that support code modularity.
   See the [developer documentation][lib_doc] for details on these strategies.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config][config] - Configuration and initialization     <a name="config"/>
 
@@ -69,7 +74,9 @@
   data files rather than directly in code files.
   See the [developer documentation][lib_doc] for details on these strategies.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/db][db] - Database schema and migrations                   <a name="db"/>
 
@@ -88,7 +95,9 @@
   in a database table.
   See the [developer documentation][lib_doc] for details on these strategies.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib][lib] - Site-specific modules, classes and definitions <a name="lib"/>
 
@@ -107,14 +116,17 @@
 
 > See the [developer documentation][lib_doc] for details on these strategies.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
-  
+  \[[*Back to top*](#top)\]
+
 ---
 
 ## Other directories
 
   These directories contain items that are central to the functioning of the
   deployed production-mode application, but rarely change.
+  <br/><br/>
+
+---
 
 ### [/bin][bin] - Scripts and executables                       <a name="bin"/>
 
@@ -133,7 +145,9 @@
   which will have direct access to the information and would not be reliant on
   extracting the information from the output of Rake tasks.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/public][public] - Web application static files         <a name="public"/>
   
@@ -148,7 +162,7 @@
   may be preferable to add logic to the Rails application to handle the route
   to that file rather than ceding control to the web server.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
   
 ---
 
@@ -157,6 +171,9 @@
   These directories are central to the functioning of the deployed
   production-mode application, but either rarely change or their change is
   managed automatically by the running application.
+  <br/><br/>
+
+---
 
 ### [/log][log] - Output from Rails and other services          <a name="log"/>
 
@@ -176,7 +193,9 @@
   We may ultimately want to make use of logging mechanisms that do not simply
   write STDOUT and STDERR to file(s) in this directory.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/tmp][tmp] - Temporary files                               <a name="tmp"/>
 
@@ -191,7 +210,7 @@
   One solution might be to replace [/tmp] with a symbolic link to a location on
   a different partition (perhaps even via NFS).
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
   
 ---
 
@@ -199,6 +218,9 @@
 
   These directories contain items are only relevant in non-production
   environments.
+  <br/><br/>
+
+---
 
 ### [/test][test] - Automated testing support                  <a name="test"/>
 
@@ -220,7 +242,9 @@
   
 > See the [developer documentation][lib_doc] for details on these strategies.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/vendor][vendor] - Customized local gem versions        <a name="vendor"/>
 
@@ -234,7 +258,9 @@
   code" to [/lib/ext][lib_ext] to limit the changes to just the definitions
   that need to be modified.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/doc][doc] - Optional generated documentation              <a name="doc"/>
 
@@ -246,7 +272,9 @@
 > This directory may or may not appear in the code directory and can be removed
   at will because it is easily re-creatable.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/jetty][jetty] - Development-only Jetty/Solr/Fedora      <a name="jetty"/>
 
@@ -259,7 +287,9 @@
   environment.  Deployed production, development and test environments rely on
   separately-maintained Solr and Fedora instances.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/solr_conf][solr_conf] - Original Sufia Solr configuration files <a name="solr_conf"/>
 
@@ -271,25 +301,10 @@
 > Nothing in this directory is used in the deployed application for any
   environment.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
 
-## Index                                                      <a name="index"/>
+---
 
-  All Markdown documents in this project.
-  <br/><br/>
-
-| Item                                      | Description                                             |
-| ----------------------------------------- | ------------------------------------------------------- |
-| [/README.md]                  (#index)    | This file.                                              |
-| [/config/README.md]           [config]    | Conventions for \*.yml configuration files.             |
-| [/lib/README.md]              [lib]       | Site-specific modules, classes and definitions.         |
-| [/lib/ext/README.md]          [lib_ext]   | Conventions for overriding system and gem definitions.  |
-| [/lib/doc/README.md]          [lib_doc]   | Developer documentation overview (this file).           |
-| [/lib/doc/markdown.md]        [markdown]  | Techniques for Markdown documentation with RubyMine.    |
-| [/lib/doc/markdown/plugin.md] [plugin]    | Markdown plugin for RubyMine.                           |
-| [/lib/doc/tips.md]            [tips]      | Tips for advanced Ruby programming.                     |
-| [/lib/doc/yaml.md]            [yaml]      | Conventions for YAML configuration files.               |
-  
 <!--  Markdown reference definitions in this file should be maintained so that
       the entire set of lines below this comment can used as a template for
       other Markdown files.  (However, because the references have to be

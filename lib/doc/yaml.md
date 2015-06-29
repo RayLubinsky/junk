@@ -1,6 +1,62 @@
 <!-- lib/doc/yaml.md -->
 
-# Conventions for config/*.yml files
+# Conventions for \*.yml configuration files
+
+## Basic /config/*.yml
+
+  The expected contents of a file depends on the gem that uses that file for
+  configuration.
+  
+  Some gems simply expect a list of YAML keys and values (e.g. analytics.yml,
+  resque-pool.yml, secrets.yml, tinymce.yml).
+  
+  The rest of the files are expected to have top-level keys for each
+  environment (that is, each value that `Rails.env` might have depending on how
+  the RAILS_ENV environment variable is set).
+  The key/value settings under a given top-level key apply only if the current
+  environment matches that key.
+  
+  Occasionally, you will see some configuration files that take advantage of
+  YAML anchors (markers beginning with **&**).
+  An anchor represents a way to refer to a tree of values so that it can be
+  inserted into another tree later in the file.
+  For example:
+  
+```yaml
+  common: &ANCHOR
+    key1a: common_value
+
+  production:
+    <<: *ANCHOR
+    key2a: prod_value
+
+  development:
+    <<: *ANCHOR
+    key2a: dev_value
+```
+
+  will result in the following Hash when loaded:
+  
+```ruby
+  {
+    'common'      => { 'key1a' => 'common_value' }
+    'production'  => { 'key1a' => 'common_value', 'key2a' => 'prod_value' }
+    'development' => { 'key1a' => 'common_value', 'key2a' => 'dev_value' }
+  }
+```
+
+  The gem that wants this information will only be looking for the top-level
+  key that matches the current environment, so it will never notice the extra
+  top-level key.
+  The net result is that the gem will see the right values for the production
+  environment while the maintainer of the file only has to remember to change
+  the value of 'key1a' in one place.
+
+## Libra conventions
+
+  To this end, the Libra configuration files have been reworked to make full
+  use of anchors so that values shared across many combinations of
+  configurations only have to be changed in one place.
 
   In order to make it easier to produce developer configurations which test out
   the behavior of the associated deployed configuration (while still preserving
@@ -9,12 +65,12 @@
   'index' key.
 
   The actual environment settings appear at the end of each configuration file
-  after an *empty* '_environments_' key.  Both the 'index' and 'environments'
+  after an *empty* 'environments' key.  Both the 'index' and 'environments'
   keys (and their contents) are ignored by code which uses the configuration
   file that code is only interested in the top-level hash key which is the same
   as the current Rails.env value.
 
-## Layout
+## Layout                                                       <a name="top"/>
 
 ```yaml
 index:
@@ -86,6 +142,5 @@ test:
   production environment ("uvalib_production") for the purpose of checking the
   behavior of the program with all of the optimizations and conditional code
   that would be exercised in the deployed production environment.
-  <br/><br/>
 
----
+  \[[*Back to top*](#top)\]

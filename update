@@ -58,3 +58,6 @@ while read SRC_FILE ; do
 	[ -d "$DST_DIR" ] || mkdir -p "$DST_DIR"
 	cp -u "$SRC_FILE" "$DST_FILE"
 done
+
+git add -A .
+git status

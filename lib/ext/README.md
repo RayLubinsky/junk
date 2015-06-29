@@ -30,7 +30,7 @@
 
 ## Featured Items
 
-### [/lib/ext/rails/envclass.rb][envclass]
+### [/lib/ext/rails/envclass.rb][envclass]                 <a name="envclass"/>
 
   This code replaces **`Rails.env`** and **`Rails.env=`** with class methods
   that create an instance of **`Rails::EnvClass`**, which augments
@@ -39,15 +39,17 @@
   (For example, `Rails.env.production?` returns true for both "production"
   and "uvalib_production".
 
-### [/lib/ext/ruby/string/snake_case.rb][snake_case]
+### [/lib/ext/ruby/string/snake_case.rb][snake_case]     <a name="snake_case"/>
 
   Adds method **`String#snake_case`** to translate strings of the form
   "MultiPartName" into "multi_part_name".
 
-### [/lib/ext/ruby/integer/constants.rb][constants]
+### [/lib/ext/ruby/integer/constants.rb][constants]       <a name="constants"/>
 
   Adds constants **`Integer::MAX`** and **`Integer::MIN`** for the largest and
   smallest native `Fixnum` values.
+
+  \[[*Back to top*](#top)\]
 
 <!-----------------------------------------------------------------------------
 Directory link references used above:

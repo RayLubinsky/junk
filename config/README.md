@@ -32,13 +32,13 @@
 | Item                                  | Description                                 |
 | ------------------------------------- | ------------------------------------------- |
 | [analytics.yml]     (#anal)           | Google Analytics.                           |
-| [blacklight.yml]    (#blacklight)     | Solr index connection.                      |
+| [blacklight.yml]    (#solr)           | Solr index connection.                      |
 | [browse_everything_providers.yml](#be)| Browse Everything gem.                      |
 | [database.yml]      (#db)             | Database connection.                        |
 | [fedora.yml]        (#fedora)         | Fedora repository connection.               |
 | [jetty.yml]         (#jetty)          | Development-only web container connection.  |
 | [redis.yml]         (#redis)          | Redis key-value data store connection.      |
-| [resque-pool.yml]   (#resque-pool)    | Resque queueing settings.                   |
+| [resque-pool.yml]   (#resque)         | Resque queueing settings.                   |
 | [role_map.yml]      (#rolemap)        | Settings for [hydra-access-controls][hydra_acl] (currently unused). |
 | [secrets.yml]       (#secrets)        | Web client session secret key.              |
 | [tinymce.yml]       (#tinymce)        | Web client editor settings.                 |
@@ -64,7 +64,9 @@
   the associated file with "require_relative" and only adjust the values that
   are wrong for the non-deployed setting.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/application.rb](application.rb)                    <a name="app"/>
 
@@ -72,12 +74,14 @@
   
 > ###### Guidelines ![Developer Information][dev_info]
 
-> In fact, [application.rb](#app) should also provide configuration values
-  that are common across *most* environments.
+> In fact, [application.rb](application.rb) should also provide configuration
+  values that are common across *most* environments.
   The minority of cases where a value should be different can be explicitly
   set in the environment file where it needs to be overridden.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/routes.rb](routes.rb)                           <a name="routes"/>
 
@@ -92,19 +96,23 @@
   the approach of mapping individual routes to individual methods if necessary.
   Use "namespace" and other Routes DSL constructs where ever possible.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/database.yml](database.yml)                         <a name="db"/>
 
   Per-environment settings for database connections.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/secrets.yml](secrets.yml)                      <a name="secrets"/>
 
   Per-environment settings for web client session secret keys.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
 
 ---
 
@@ -115,73 +123,64 @@
   This directory holds YAML data files which hold the text for labels, buttons,
   messages, etc., which are processed by the I18n subsystem to handle
   internationalization.
-  Files ending with "en.yml" are the English versions of the text.
-  
-  The YAML files are processed into Hashes which are accessible through the
-  `I18n.t` method.
-  The argument to that method is a dotted notation which describes the path of
-  keys in the YAML hierarchy where the value can be found.
-  
-### Localization files
-  
-| File              | Description                         |
-| ----------------- | ----------------------------------- |
-| en.yml            | Unused sample file.                 |
-| blacklight.en.yml | Overrides of Blacklight gem values. |
-| devise.en.yml     | Overrides of Devise gem values.     |
-| libra.en.yml      | Libra application-specific values.  |
-| solr.en.yml       | Solr fields (experimental).         |
-| sufia.en.yml      | Overrides of Sufia gem values.      |
   
 > ###### Guidelines ![Developer Information][dev_info]
   
-> The `solr.en.yml` and `libra.en.yml` files are an attempt at maintaining
-  more than just text in these configuration files.
-
-> The I18n internationalization subsystem has a rich interface for acquiring
-  its hierarchical hashes of information from sources other than YAML files.
-  This could provide a generalized mechanism for storing configuration
-  information in a central location and only using local YAML files as
-  emergency fall-backs.
+> See the [extended documentation][locale] for an in-depth description of this
+  important aspect of configuration.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/blacklight.yml](blacklight.yml)                   <a name="solr"/>
 
   Per-environment settings for Solr index connections.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/fedora.yml](fedora.yml)                         <a name="fedora"/>
 
   Per-environment settings for Fedora repository connections.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/redis.yml](redis.yml)                            <a name="redis"/>
 
   Per-environment settings for Redis key-value data store connections.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/resque-pool.yml](resque-pool.yml)               <a name="resque"/>
 
   Per-environment settings for Resque queueing settings.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/browse_everything_providers.yml](browse_everything_providers.yml) <a name="be"/>
 
   API keys for cloud storage providers.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/tinymce.yml](tinymce.yml)                      <a name="tinymce"/>
 
   Setup values for the TinyMCE client-side Javascript WYSIWYG editor.
   See http://www.tinymce.com/.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/analytics.yml](analytics.yml)                     <a name="anal"/>
 
@@ -191,7 +190,9 @@
 
 > *Not currently used.*
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/jetty.yml](jetty.yml) - development-only         <a name="jetty"/>
 
@@ -201,7 +202,9 @@
 
 > *Not used in production.*
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/role_map.yml](role_map.yml)                    <a name="rolemap"/>
 
@@ -213,7 +216,7 @@
   Most Hydra code uses the concepts of "role" and "group" interchangeably.
   We need to replace this with true Role-Based Access Control.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
 
 ---
 
@@ -228,25 +231,32 @@
 
 > *Not used in production.*
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/environment.rb](environment.rb)                    <a name="env"/>
 
   Despite the name, this code loads the initializers from the
   /config/initializers directory.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/config/boot.rb](boot.rb)                                 <a name="boot"/>
 
   Application startup code which engages Bundler to load all of the gems listed
   in the Gemfile.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 <!-- Topic link references used above:
 REF ------------- LINK ------------------------------ TOOLTIP ---------------->
-[dev_info]:       ../lib/doc/images/info_16x16.png "Developer information"
+[dev_info]:       ../lib/doc/images/info_16x16.png    "Developer information"
+[locale]:         ../lib/doc/locale.md                "Conventions for \*.en.\*.yml I18n configuration files"
 [deployed_dev]:   environments/uvalib_development.rb
 [deployed_prod]:  environments/uvalib_production.rb
 [deployed_test]:  environments/uvalib_test.rb

@@ -1,14 +1,14 @@
 <!-- lib/doc/tips.md -->
 
-# Implementation Tips                                        <a name="top"></a>
+# Tips for advanced Ruby programming                            <a name="top"/>
 
   A collection of tips for some of the finer points of Ruby.
 
-  [Optional arguments]    (#optional_arguments) <br/>
-  [Hash option arguments] (#hash_options)       <br/>
-  [Variable arguments]    (#variable_arguments) <br/>
+  [Optional arguments]    (#opt_args)   <br/>
+  [Hash option arguments] (#hash_opt)   <br/>
+  [Variable arguments]    (#var_args)   <br/>
 
-## Optional arguments                         <a name="optional_arguments"></a>
+## Optional arguments                                      <a name="opt_args"/>
 
   Method arguments may be provided a default value in the method definition;
   the caller of the method may choose to provide a value for that argument or
@@ -46,15 +46,19 @@
   method because that is the order that arguments would be assigned when the
   method was executed.
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+  
+---
 
-## Hash option arguments                            <a name="hash_options"></a>
+## Hash option arguments                                   <a name="hash_opt"/>
 
   TODO
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
 
-## Variable arguments                         <a name="variable_arguments"></a>
+---
+
+## Variable arguments                                      <a name="var_args"/>
 
   To define a method with a variable number of arguments, use a parameter whose
   name is prefixed with "\*"; a typical choice is `*args`.  For example:
@@ -154,4 +158,6 @@
   
 ```
 
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---

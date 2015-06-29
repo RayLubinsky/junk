@@ -37,6 +37,10 @@
 | [/lib/tasks]  (#tasks)  | Libra rake tasks.                             |
 | [/lib/uva]    (#uva)    | UVa Library-specific modules and classes.     |
 
+  <br/>
+  
+---
+
 ### [/lib/doc][lib_doc] - Internal developer documentation      <a name="doc"/>
 
   Development notes that are applicable across the entire project. 
@@ -53,7 +57,9 @@
   facts there and provide links to one or more Markdown files in this directory
   to address all of the details. 
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib/libra][lib_libra] - Libra-specific modules and classes <a name="libra"/>
 
@@ -61,14 +67,18 @@
   this will be code that is unique to the application.  In other cases, this
   will be application-specific variations of definitions from [/lib/uva][lib_uva].
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib/uva][lib_uva] - UVa Library-specific modules and classes <a name="uva"/>
 
   The location for code which may be of general use to UVa Library applications
   (including this one).
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib/ext][lib_ext] - System and gem overrides              <a name="ext"/>
 
@@ -76,20 +86,26 @@
   "monkey patches".  Put definitions here; if required during initialization,
   use "require" references to this code where needed in /config/initializers.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib/tasks][lib_tasks] - Libra rake tasks                <a name="tasks"/>
 
   Rake tasks to support Libra development and operations.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 ### [/lib/assets][lib_asst] - UVa Library images, Javascript, CSS <a name="assets"/>
 
   The location for assets (images, Javascript, CSS) that are specific to
   UVa Library or to the application.
   
-  <div style="text-align:right">\[[Back to top](#top)\]</div>
+  \[[*Back to top*](#top)\]
+
+---
 
 <!-----------------------------------------------------------------------------
 Directory link references used above:
